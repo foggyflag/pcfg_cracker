@@ -172,6 +172,8 @@ def main():
         
         guess_stop_time = time.perf_counter() - guess_start_time
         if command_line_results.queue_info == True:
+            if num_preterminals == 58:
+                return
             if num_preterminals % 1000 == 0:
                 print ("PQueue:" + str(len(p_queue.p_queue)))
                 print ("Total number of Pre Terminals: " + str (num_preterminals))
